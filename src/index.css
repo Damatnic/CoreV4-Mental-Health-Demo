@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Crisis-safe color schemes for accessibility */
+  .crisis-safe {
+    @apply contrast-more:text-black contrast-more:bg-white;
+  }
+  
+  /* Focus styles for accessibility */
+  .focus-visible:focus {
+    @apply outline-2 outline-offset-2 outline-blue-500;
+  }
+}
